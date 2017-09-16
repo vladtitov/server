@@ -1,0 +1,87 @@
+CREATE TABLE `frontdes_callcenter`.`registrations` ( `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+ `email` VARCHAR(255) NOT NULL , `password` TEXT NOT NULL , `uid` VARCHAR(255) NOT NULL ,
+  `confirmed` BOOLEAN NOT NULL , `nickname` VARCHAR(255) NOT NULL ,
+   `createdAt` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+   `updatedAt` TIMESTAMP on update CURRENT_TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+    `lastVisit` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+     PRIMARY KEY (`id`),
+     UNIQUE `email` (`email`),
+      UNIQUE `uid` (`uid`),
+      UNIQUE `nickname` (`nickname`)
+      ) ENGINE = InnoDB;
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 4.6.6
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jul 22, 2017 at 11:29 AM
+-- Server version: 5.6.23-cll-lve
+-- PHP Version: 5.6.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `frontdes_callcenter`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registration`
+--
+
+CREATE TABLE `registrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` text NOT NULL,
+  `uid` varchar(255) NOT NULL,
+  `confirmed` tinyint(1) NOT NULL DEFAULT '0',
+  `nickname` varchar(255) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `lastVisit` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registration`
+--
+
+INSERT INTO `registrations` (`id`, `email`, `password`, `uid`, `confirmed`, `nickname`, `createdAt`, `updatedAt`, `lastVisit`) VALUES
+(1, 'vlad@gmaol.com', 'asdfghjk', 'qazxsw', 0, 'hello', '2017-07-22 15:27:08', '2017-07-22 15:27:08', '2017-07-22 15:27:08');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `registration`
+--
+ALTER TABLE `registrations`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `uid` (`uid`),
+  ADD UNIQUE KEY `nickname` (`nickname`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `registration`
+--
+ALTER TABLE `registration`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,1 @@
+{"version":3,"file":"initModel.js","sourceRoot":"","sources":["initModel.ts"],"names":[],"mappings":";;AACA,+BAAiC;AAMjC,uBAA8B,SAAoB;IAChD,MAAM,CAAC,SAAS,CAAC,MAAM,CAAC,MAAM,EAAE;QAC7B,MAAM,EAAE,GAAG,CAAC,OAAO;QACpB,WAAW,EAAE,GAAG,CAAC,IAAI;KACtB,CAAC,CAAC;AACL,CAAC;AALD,sCAKC"}

@@ -1,0 +1,16 @@
+{
+  "ver":1.0,
+  "menu":{
+    "header":"URLS",
+    "buttons":[
+      {
+        "label":"Home",
+        "href":"home"
+      },
+      {
+        "label":"About",
+        "href":"about"
+      }
+    ]
+  }
+}

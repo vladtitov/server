@@ -1,0 +1,2 @@
+INSERT INTO users (id,email,password) VALUES (1,'uplight.ca@gmail.com','$2a$10$Op3rW9gYT6uXDlAOrmRsHOheTy6jwwDamZONx.apHaQjzmqj8Tiem');
+INSERT INTO users (id,email,password) VALUES (2,'john@doe.com','$2a$10$jMDx6HvGHfrCMSi/HfMfeOKQJkwaM7FKCxz4zExdvy6nEaN7FRWGm');
